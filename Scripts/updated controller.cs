@@ -11,21 +11,6 @@ public class AccelerometerInput : MonoBehaviour {
 	private Rigidbody rb;
 
 
-
-	void Update () 
-
-	{
-
-		transform.Translate ((Input.acceleration.x)/2, 0, (-Input.acceleration.z)/2);
-
-	}
-
-
-
-
-
-
-
 	void Start () 
 
 	{
@@ -35,6 +20,14 @@ public class AccelerometerInput : MonoBehaviour {
 	}
 
 
+
+	void Update () 
+
+	{
+
+		transform.Translate ((Input.acceleration.x)/2, 0, (-Input.acceleration.z)/2);
+
+	}
 
 
 
