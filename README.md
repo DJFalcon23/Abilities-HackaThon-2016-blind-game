@@ -1,2 +1,2 @@
-# Abilitie-HackaThon-2016-blind-game
-Game for the blind
+# Abilities-HackaThon-2016-blind-game
+A game for the blind
