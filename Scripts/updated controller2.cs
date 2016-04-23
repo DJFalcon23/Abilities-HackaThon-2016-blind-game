@@ -1,3 +1,8 @@
+using UnityEngine;
+
+using System.Collections;
+
+
 var speed = 10.0;
 function Update () {
     var dir : Vector3 = Vector3.zero;
