@@ -1,12 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AccelerometerInput : MonoBehaviour {
+public class ExampleClass : MonoBehaviour {
+	public float speed = 10.0F;
+	//public GameObject player;
+	private Rigidbody rb;
 
-
-
-	void Update () 
+	void Start () 
 	{
-		transform.Translate ((Input.acceleration.x)/2, 0, (-Input.acceleration.z)/2);
+		rb = GetComponent<Rigidbody> ();
+	}
+
+
+	void Update() {
+		Vector3 dir = Vector3.zero;
+		dir.x = -Input.acceleration.y;
+		dir.z = Input.acceleration.x;
+		if (dir.sqrMagnitude > 1)
+			dir.Normalize();
+
+		dir *= Time.deltaTime;
+		transform.Translate(dir * speed);
+
+		//transform.position = player.transform.position; 
+
+		rb.AddForce (dir);
 	}
 }
