@@ -9,7 +9,7 @@ public class BallMovement : MonoBehaviour {
 	{
 		rb = GetComponent<Rigidbody> ();
 	}
-	
+
 
 	void FixedUpdate () 
 	{
